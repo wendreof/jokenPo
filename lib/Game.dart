@@ -18,7 +18,18 @@ class _GameState extends State<Game> {
               child: Text('Escolha do App',
                   textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold))),
-          Image.asset("images/padrao.png"),
+          GestureDetector(
+            onTap: () {
+              print('1 clicked');
+            },
+            onDoubleTap: () {
+              print('2 clicked');
+            },
+            onLongPress: () {
+              print('1 long cliked');
+            },
+            child: Image.asset("images/padrao.png"),
+          ),
           Padding(
               padding: EdgeInsets.only(top: 32, bottom: 16),
               child: Text('Escolha uma das opções',
